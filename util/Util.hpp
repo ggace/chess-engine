@@ -16,5 +16,8 @@ enum Turn{
 // 기물의 종류를 위함. 
 // 실제 구동에서 필요한 것이 아닌 toString과 같이 정보를 출력할때 필요함.
 enum Type {
-    KING, QUEEN, BISHOP, KNIGHT, ROOK, PAWN
+    UNDEFINED, KING, QUEEN, BISHOP, KNIGHT, ROOK, PAWN
 };
+
+string typeToString(Type type);
+string turnToString(Turn turn);

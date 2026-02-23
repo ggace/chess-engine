@@ -20,3 +20,9 @@ void Position::setRow(int r) {
 void Position::setCol(int c) {
     this->col = c;
 }
+
+string Position::toString() {
+    string result(1, (char)(row + 'a'));
+    result += col;
+    return result;
+}

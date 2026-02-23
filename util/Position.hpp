@@ -16,4 +16,6 @@ public:
 
     void setRow(int r);
     void setCol(int c);
+
+    string toString();
 };
