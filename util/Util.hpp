@@ -21,3 +21,5 @@ enum Type {
 
 string typeToString(Type type);
 string turnToString(Turn turn);
+
+bool isInBoard(int row, int col);

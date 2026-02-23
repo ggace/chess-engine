@@ -28,3 +28,7 @@ string turnToString(Turn turn) {
     return "undefined";
 
 }
+
+bool isInBoard(int row, int col) {
+    return 0<= row && row <= 7 && 0 <= col && col <= 7;
+}
