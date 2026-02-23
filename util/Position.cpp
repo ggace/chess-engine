@@ -23,6 +23,6 @@ void Position::setCol(int c) {
 
 string Position::toString() {
     string result(1, (char)(row + 'a'));
-    result += col;
+    result += (char)(col+'0');
     return result;
 }

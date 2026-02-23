@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Util.cpp"
+#include "Util.hpp"
 
 class Position {
 private:
