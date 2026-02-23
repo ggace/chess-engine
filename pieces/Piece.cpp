@@ -2,12 +2,14 @@
 
 Piece::Piece(Turn own, int row, int col) : type(UNDEFINED), owner(own), is_moved(false), position(row, col) {}
 
-void Piece::moveTo(int row, int col){
-    position.setPosition(row, col);
+bool Piece::moveTo(int row, int col){
+    if(this->isPossibleMovement(row, col)) {
+        position.setPosition(row, col);
+        return true;
+    }
+    return false;
 }
 
-
-// 오버라이딩 필요. 각각마다 다름.
 
 // getter
 Type Piece::getType() const {

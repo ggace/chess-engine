@@ -15,10 +15,12 @@ public:
 
     virtual ~Piece() = default;
 
-    void moveTo(int row, int col);
+    bool moveTo(int row, int col); // true: 성공, false: 실패
 
     // 오버라이딩 필요. 각각마다 다름.
-    //virtual vector<Position> getPossibleMovement() const =0;
+    virtual vector<Position> getPossibleMovement() const =0;
+
+    virtual bool isPossibleMovement(int row, int col) const=0;
     
     // getter
     Type getType() const;
