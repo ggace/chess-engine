@@ -8,10 +8,10 @@
 
 using namespace std;
 
-using Turn = enum{
+enum Turn{
     WHITE, BLACK
 };
 
-using Type = enum {
+enum Type {
     KING, QUEEN, BISHOP, KNIGHT, ROOK, PAWN
 };

@@ -2,12 +2,12 @@
 
 #include "Util.cpp"
 
-class Position() {
+class Position {
 private:
     int row;
     int col;
 public:
-    Positoin(int row, int col);
+    Position(int row, int col);
 
     void setPosition(int row, int col);
 
