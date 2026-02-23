@@ -1,0 +1,8 @@
+rough한 구성: https://code-learn-ing.tistory.com/28
+
+game.cpp : 사용자와 상호작용
+board.cpp: 체스 기물 및 체스판 상태 저장, 제어
+piece.cpp: 기물 그 자체. 기물 위치, 가능한 이동 좌표 등
+position.cpp: 기물들의 위치를 저장하기 위함. array로 했을때의 문제의 가능성으로 일단 class로 만들어둠.
+log.cpp || move.cpp: 기물의 움직임을 저장. 아마 game.cpp에 vector나 linkedlist로 저장될 거임. 
+resultData.cpp: 결과 출력 통일화를 위한 클래스. game.cpp에서 사용자와의 소통과정에서 쓸듯.
