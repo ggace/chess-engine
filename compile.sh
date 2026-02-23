@@ -1,0 +1,1 @@
+g++ main.cpp **/*.cpp -o main.out && ./main.out
