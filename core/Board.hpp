@@ -23,8 +23,8 @@ public:
     Piece* getPieceByPosition(Position position);
 
     // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
-    long long getBoardPositionOfAll(); // 모든 기물 위치
+    long long getBoardPositionOfAll() const; // 모든 기물 위치
 
     // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
-    long long Board::getBoardPositionFrom(Turn turn); // turn의 반대되는놈.
+    long long Board::getBoardPositionFrom(Turn turn) const; // turn의 반대되는놈.
 };

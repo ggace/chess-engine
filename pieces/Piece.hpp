@@ -2,12 +2,13 @@
 
 #include "../util/Util.hpp"
 #include "../util/Position.hpp"
+#include "../core/Board.hpp"
 
 class Piece {
 protected:
     Type type;
     Turn owner;
-    Position position; // 굳이? 필요한가 싶긴 해.
+    Position position;
     bool is_moved;
     vector<array<int,2>> possibleMovement = {};
 public:
@@ -19,9 +20,9 @@ public:
     bool moveTo(int row, int col); // true: 성공, false: 실패
 
     // 오버라이딩 필요. 각각마다 다름.
-    virtual vector<Position> getPossibleMovement() const =0;
+    virtual vector<Position> getPossibleMovement(const Board* board) =0;
 
-    virtual bool isPossibleMovement(int row, int col) const=0;
+    virtual bool isPossibleMovement(const Board* board, int row, int col)=0;
     
     // getter
     Type getType() const;

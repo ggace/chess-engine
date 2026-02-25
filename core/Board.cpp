@@ -27,7 +27,7 @@ Piece* Board::getPieceByPosition(Position position){ // todo
 }
 
 
-long long Board::getBoardPositionFrom(Turn turn){
+long long Board::getBoardPositionFrom(Turn turn) const{
     int cur = 0;
     long long result = 0;
     for(int i = 0; i < 8; i++) {
@@ -39,6 +39,6 @@ long long Board::getBoardPositionFrom(Turn turn){
 }
 
 // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
-long long Board::getBoardPositionOfAll(){
+long long Board::getBoardPositionOfAll() const{
     return getBoardPositionFrom(WHITE) | getBoardPositionFrom(BLACK);
 }
