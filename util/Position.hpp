@@ -10,11 +10,11 @@ public:
 
     void setPosition(int row, int col);
 
-    int getRow();
-    int getCol();
+    int getFile();
+    int getRank();
 
-    void setRow(int r);
-    void setCol(int c);
+    void setFile(int r);
+    void setRank(int c);
 
     string toString();
 };

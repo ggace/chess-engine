@@ -23,7 +23,7 @@ string Board::boardToStringFen(){ // todo
 }
 
 Piece* Board::getPieceByPosition(Position position){ // todo
-
+    return board[position.getFile()][position.getRank()];
 }
 
 
