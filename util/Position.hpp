@@ -4,8 +4,7 @@
 
 class Position {
 private:
-    int row;
-    int col;
+    int position;
 public:
     Position(int row, int col);
 
