@@ -7,7 +7,7 @@ class Piece {
 protected:
     Type type;
     Turn owner;
-    Position position;
+    Position position; // 굳이? 필요한가 싶긴 해.
     bool is_moved;
     vector<array<int,2>> possibleMovement = {};
 public:

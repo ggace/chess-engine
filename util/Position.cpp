@@ -25,7 +25,7 @@ void Position::setCol(int c) {
 string Position::toString() {
     int row = position / 8;
     int col = position % 8;
-    string result(1, (char)(row + 'a'));
-    result += (char)(col+'1');
+    string result(1, (char)(col + 'a'));
+    result += (char)(row+'1');
     return result;
 }

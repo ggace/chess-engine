@@ -26,8 +26,8 @@ public:
     long long getBoardPositionOfAll(); // 모든 기물 위치
 
     // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
-    long long getBoardPositionOfWhite(); // 모든 기물 위치
+    long long getBoardPositionOfWhite(); // 흰색 위치
 
     // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
-    long long getBoardPositionOfBlack(); // 모든 기물 위치
+    long long getBoardPositionOfBlack(); // 검은색 위치
 };
