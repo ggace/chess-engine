@@ -1,1 +1,1 @@
-g++ main.cpp util/*.cpp pieces/*.cpp -o main.out && ./main.out
+g++ main.cpp util/*.cpp core/*.cpp -o main.out pieces/*.cpp  && ./main.out

@@ -1,7 +1,8 @@
 #include "Board.hpp"
+#include "../pieces/King.hpp"
 
 void Board::initialize() { // todo
-
+    board[0][4] = new King(WHITE, 0,4);
 }
 Board::Board() { 
     initialize();
@@ -19,7 +20,7 @@ void Board::unmove(){ // todo
 } // Move 받자.
 
 string Board::boardToStringFen(){ // todo
-
+    return "";
 }
 
 Piece* Board::getPieceByPosition(Position position){ // todo
@@ -32,7 +33,7 @@ long long Board::getBoardPositionFrom(Turn turn) const{
     long long result = 0;
     for(int i = 0; i < 8; i++) {
         for(int j = 0; j < 8; j++) {
-            result |= ((long long)(board[i][j] != 0 && board[i][j]->getType() != turn) << (cur++));
+            result |= ((long long)(board[i][j] != 0 && board[i][j]->getOwner() != turn) << (cur++));
         }
     }
     return result;

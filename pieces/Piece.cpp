@@ -2,8 +2,8 @@
 
 Piece::Piece(Turn own, int row, int col) : type(UNDEFINED), owner(own), is_moved(false), position(row, col) {}
 
-bool Piece::moveTo(int row, int col){
-    if(this->isPossibleMovement(row, col)) {
+bool Piece::moveTo(Board* board, int row, int col){
+    if(this->isPossibleMovement(board, row, col)) {
         position.setPosition(row, col);
         return true;
     }
@@ -17,6 +17,9 @@ Type Piece::getType() const {
 }
 Position Piece::getPosition() const {
     return position;
+}
+Turn Piece::getOwner() const {
+    return owner;
 }
 
 // value와 구분한 이유: 

@@ -1,4 +1,5 @@
 #include "King.hpp"
+#include "../core/Board.hpp"
 
 King::King(Turn own, int row, int col) : Piece(own, row, col)  {
     type = KING;
@@ -42,5 +43,5 @@ vector<Position> King::getPossibleMovement(const Board* board) {
 }
 
 bool King::isPossibleMovement(const Board* board, int row, int col) {
-
+    return true;
 }

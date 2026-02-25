@@ -2,7 +2,9 @@
 
 #include "../util/Util.hpp"
 #include "../util/Position.hpp"
-#include "../core/Board.hpp"
+// #include "../core/Board.hpp"
+
+class Board;
 
 class Piece {
 protected:
@@ -17,7 +19,7 @@ public:
 
     virtual ~Piece() = default;
 
-    bool moveTo(int row, int col); // true: 성공, false: 실패
+    bool moveTo(Board* board, int row, int col); // true: 성공, false: 실패
 
     // 오버라이딩 필요. 각각마다 다름.
     virtual vector<Position> getPossibleMovement(const Board* board) =0;
@@ -26,6 +28,7 @@ public:
     
     // getter
     Type getType() const;
+    Turn getOwner() const;
     Position getPosition() const;
     
     // value와 구분한 이유: 
