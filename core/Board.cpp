@@ -26,39 +26,19 @@ Piece* Board::getPieceByPosition(Position position){ // todo
 
 }
 
+
+long long Board::getBoardPositionFrom(Turn turn){
+    int cur = 0;
+    long long result = 0;
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++) {
+            result |= ((long long)(board[i][j] != 0 && board[i][j]->getType() != turn) << (cur++));
+        }
+    }
+    return result;
+}
+
 // 8*8이니깐 64비트에 1, 0으로 있나 없나 표시
 long long Board::getBoardPositionOfAll(){
-    int cur = 0;
-    long long result = 0;
-    for(int i = 0; i < 8; i++) {
-        for(int j = 0; j < 8; j++) {
-            result |= ((long long)(board[i][j] != 0) << (cur++));
-        }
-    }
-    return result;
-}
-
-
-long long Board::getBoardPositionOfWhite(){
-    int cur = 0;
-    long long result = 0;
-    for(int i = 0; i < 8; i++) {
-        for(int j = 0; j < 8; j++) {
-            result |= ((long long)(board[i][j] != 0 && board[i][j]->getType() == WHITE) << (cur++));
-        }
-    }
-    return result;
-}
-
-
-long long Board::getBoardPositionOfBlack(){
-    int cur = 0;
-    long long result = 0;
-    for(int i = 0; i < 8; i++) {
-        for(int j = 0; j < 8; j++) {
-            result |= ((long long)(board[i][j] != 0 && board[i][j]->getType() == BLACK) << (cur++));
-        }
-    }
-    return result;
-
+    return getBoardPositionFrom(WHITE) | getBoardPositionFrom(BLACK);
 }
